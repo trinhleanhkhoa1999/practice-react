@@ -2,10 +2,14 @@ import React, { useState } from "react";
 import BillingAddress from "./components/BillingAddress/BillingAddress";
 import { Container, Row, Col } from "react-bootstrap";
 import YourCart from "./components/BillingAddress/YourCart";
+import AddNotes from "./components/AddNotes";
+import AddList from "./components/AddList";
 
 function App() {
   return (
     <>
+      {/* <AddNotes />
+      <AddList/> */}
       <Container>
         <Row>
           <Col md={8}>
