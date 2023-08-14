@@ -84,6 +84,9 @@ const AddList = () => {
             })}
         </tbody>
       </Table>
+      <Row size="lg">
+        <Button variant="outline-danger">Clear Item</Button>
+      </Row>
     </Container>
   );
 };
