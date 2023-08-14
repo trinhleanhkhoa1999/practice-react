@@ -1,13 +1,26 @@
 import React, { useState } from "react";
-// import AddNotes from "./components/AddNotes";
+import BillingAddress from "./components/BillingAddress/BillingAddress";
+import { Container, Row, Col } from "react-bootstrap";
+import YourCart from "./components/BillingAddress/YourCart";
+import AddNotes from "./components/AddNotes";
 import AddList from "./components/AddList";
 
 function App() {
   return (
-    <div style={{ marginTop: "50px" }}>
-      {/* <AddNotes /> */}
-      <AddList />
-    </div>
+    <>
+      {/* <AddNotes />
+      <AddList/> */}
+      <Container>
+        <Row>
+          <Col md={8}>
+            <BillingAddress />
+          </Col>
+          <Col md={4}>
+            <YourCart />
+          </Col>
+        </Row>
+      </Container>
+    </>
   );
 }
 
