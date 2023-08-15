@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import BillingAddress from "./components/BillingAddress/BillingAddress";
 import { Container, Row, Col } from "react-bootstrap";
 import YourCart from "./components/BillingAddress/YourCart";
-import AddNotes from "./components/AddNotes";
-import AddList from "./components/AddList";
+import Birthday from "./components/Birthdays";
+// import AddNotes from "./components/AddNotes";
+// import AddList from "./components/AddList";
 
 function App() {
   return (
@@ -17,6 +18,14 @@ function App() {
           </Col>
           <Col md={4}>
             <YourCart />
+          </Col>
+        </Row>
+      </Container>
+      <hr />
+      <Container style={{ background: "#f189b1" }}>
+        <Row>
+          <Col md={6} className="mx-auto my-5">
+            <Birthday />
           </Col>
         </Row>
       </Container>
