@@ -30,11 +30,12 @@ const YourCart = () => {
         </Stack>
         <ListGroup as="ol" className="mt-4">
           {listCart &&
-            listCart.map((item) => {
+            listCart.map((item, index) => {
               return (
                 <ListGroup.Item
                   as="li"
                   className="d-flex justify-content-between align-items-start"
+                  key={`Cart ${index}`}
                 >
                   <div className="ms-2 me-auto">
                     <div className="fw-bold">{item.name}</div>

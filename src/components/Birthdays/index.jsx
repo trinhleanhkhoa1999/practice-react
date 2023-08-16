@@ -15,9 +15,12 @@ const Birthday = () => {
           <hr />
           <Stack>
             {listBirthday &&
-              listBirthday.map((item) => {
+              listBirthday.map((item, index) => {
                 return (
-                  <div className="d-flex align-items-center mb-4">
+                  <div
+                    className="d-flex align-items-center mb-4"
+                    key={`Birthday ${index}`}
+                  >
                     <Col md={3} className="p-2">
                       <Image
                         src={item.img}
