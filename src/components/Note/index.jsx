@@ -1,6 +1,6 @@
 import { Button } from "react-bootstrap";
 import "./style.scss";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import NoteCards from "./NoteCards";
 const Note = () => {
   const [title, setTitle] = useState("");
@@ -12,6 +12,7 @@ const Note = () => {
     setListNotes([
       ...listNotes,
       {
+        id: Math.floor(Math.random() * 10000) + 1,
         title: title,
         note: note,
       },
@@ -19,7 +20,11 @@ const Note = () => {
     setTitle("");
     setNote("");
   };
-  console.log("listNotes: ", listNotes);
+  const handleDelete = (itemDelete) => {
+    let cloneListNotes = listNotes.filter((item) => item.id !== itemDelete.id);
+    setListNotes(cloneListNotes);
+  };
+
   return (
     <>
       <form>
@@ -48,7 +53,7 @@ const Note = () => {
           </Button>
         </div>
       </form>
-      <NoteCards listNotes={listNotes} />
+      <NoteCards listNotes={listNotes} handleDelete={handleDelete} />
     </>
   );
 };

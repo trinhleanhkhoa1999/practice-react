@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, Button, Row, Container, Col } from "react-bootstrap";
-const NoteCards = ({ listNotes }) => {
+const NoteCards = ({ listNotes, handleDelete }) => {
   return (
     <Container className="mt-5">
       <Row>
@@ -13,7 +13,11 @@ const NoteCards = ({ listNotes }) => {
                     <Card.Title>{item.title}</Card.Title>
                     <Card.Text>{item.note}</Card.Text>
                     <div className="d-grid gap-2">
-                      <Button variant="danger" size="lg">
+                      <Button
+                        variant="danger"
+                        size="lg"
+                        onClick={() => handleDelete(item)}
+                      >
                         Delete
                       </Button>
                     </div>
