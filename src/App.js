@@ -4,6 +4,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import YourCart from "./components/BillingAddress/YourCart";
 import Birthday from "./components/Birthdays";
 import ListFeature from "./components/ListFeature";
+import NotePage from "./pages/NotePage";
 // import AddNotes from "./components/AddNotes";
 // import AddList from "./components/AddList";
 
@@ -34,6 +35,8 @@ function App() {
       <Container>
         <ListFeature />
       </Container>
+      <hr />
+      <NotePage />
     </>
   );
 }
