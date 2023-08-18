@@ -1,0 +1,19 @@
+.note-form{
+    margin: auto;
+    width: 50%;
+    margin-top: 30px;
+    padding: 20px ;
+    border: 1px solid rgb(241, 235, 235) ;
+    border-radius: 10px;
+    .form-control{
+        border: none;
+        outline: none !important;
+        box-shadow: none !important;
+        margin: 10px 0;
+        &:nth-child(2){
+            margin-bottom: 40px;
+        }
+    }
+   
+}
+
